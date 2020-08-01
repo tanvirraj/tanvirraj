@@ -1,0 +1,41 @@
+.homeContainer {
+  margin: 136px 172px;
+
+  .title {
+    font-size: 64px;
+    font-weight: 800;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #c471ed, #f64f59);
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+  }
+  .subTitle {
+    font-size: 32px;
+    font-weight: 400;
+    color: #8c8c8c;
+    margin-bottom: 16px;
+  }
+  .skillsets {
+    font-size: 28px;
+    font-weight: 300;
+    .skillSet {
+      padding: 6px 6px 6px 6px;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+    .skillTypescript {
+      margin-right: 8px;
+      background-color: #dda0dd;
+    }
+    .skillReact {
+      margin-right: 8px;
+      background-color: #ffb6c1;
+    }
+    .skillNode {
+      margin-right: 8px;
+      background-color: wheat;
+    }
+  }
+}
