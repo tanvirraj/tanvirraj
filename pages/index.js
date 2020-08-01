@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "../styles/index.module.scss";
 import cx from "classnames";
 
-const name = "Tanvir Raj";
+const name = "Tanvir Raj | Software Artisan";
 export const siteTitle = "Tanvir Raj";
 
 function HomePage() {
@@ -22,6 +22,7 @@ function HomePage() {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <title>{name}</title>
       </Head>
       <div className={styles.homeContainer}>
         <div className={styles.title}>Tanvir Raj</div>
