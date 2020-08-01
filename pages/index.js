@@ -5,8 +5,7 @@ import cx from "classnames";
 const name = "Tanvir Raj | Software Artisan";
 export const siteTitle = "Tanvir Raj";
 
-const imagePrewView = require('./images/site_preview.png');
-
+const imagePrewView = require("./images/site_preview.png");
 
 function HomePage() {
   return (
@@ -19,7 +18,6 @@ function HomePage() {
         />
         <meta
           property="og:image"
-          content={url(${require("./images/site_preview.png")})}
           content={imagePrewView}
           // content={`https://og-image.now.sh/${encodeURI(
           //   siteTitle
