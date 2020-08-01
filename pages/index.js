@@ -5,6 +5,9 @@ import cx from "classnames";
 const name = "Tanvir Raj | Software Artisan";
 export const siteTitle = "Tanvir Raj";
 
+const imagePrewView = require('./images/site_preview.png');
+
+
 function HomePage() {
   return (
     <>
@@ -16,7 +19,8 @@ function HomePage() {
         />
         <meta
           property="og:image"
-          content="<%= require('./images/site_preview.png') %>"
+          content={url(${require("./images/site_preview.png")})}
+          content={imagePrewView}
           // content={`https://og-image.now.sh/${encodeURI(
           //   siteTitle
           // )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
