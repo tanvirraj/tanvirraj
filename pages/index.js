@@ -27,7 +27,7 @@ function HomePage() {
       <div className={styles.homeContainer}>
         <div className={styles.title}>Tanvir Raj</div>
         <div className={styles.subTitle}>
-          I’m Software Artisan, build digital product with
+          I’m Software Artisan, build digital products with
         </div>
         <div className={styles.skillsets}>
           <span className={cx(styles.skillSet, styles.skillTypescript)}>
