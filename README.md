@@ -1,14 +1,23 @@
+Tanvir Raj\
+Software Artisan | Typescript | React.js | Node.js\
+rajbp02@gmail.com \
+http://tanvirraj.com \
+https://github.com/tanvirraj
+
+## Cover letter
+
+I have over 4+ years of extensive background in designing and building both consumer and enterprise applications. Experienced with full lifecycle software development including requirements capture, prototyping, proof of concept, design, implementation, testing, releasing, and operation.
+
 ## Skills
 
-**Languages:** Typescript, Javascript, ECMAScript(ES6), Node.javascript
-**Libraries:** React, Ant design, Materiul-UI, Radix-ui (headless ui components), stitches (css-in-javascript), Formik, Jest, React Testing Library, graphql, apllo-query,
-**Frameworks:** Redux, Redux-toolkit, Rematch, Next.javascript, Express.javascript
-**Tools:** Git, Github, Gitlab, storybook, netlify, vercel
+**Languages:** Typescript, Javascript, ECMAScript(ES6), Node.javascript\
+**Libraries:** React, Ant design, Materiul-UI, Radix-ui (headless ui components),stitches (css-in-javascript), Formik, Jest, React Testing Library, graphql, apllo-query\
+**Frameworks:** Redux, Redux-toolkit, Rematch, Next.javascript, Express.javascript\
+**Tools:** Git, Github, Gitlab, storybook, netlify, vercel\
 
 ## Work Experience
 
-## Full-Stack Software Developer
-
+**Full-Stack Software Developer**
 sparehub.com(shutdown) (July 2021 - April 2022 )
 
 - Building 2 internal apps from ground-up
@@ -31,7 +40,8 @@ sparehub.com(shutdown) (July 2021 - April 2022 )
 - wrote unit test and e2e test for internal chat SDK
 - Build features for internal chat microservice using clean architecture
 - wrote test case with Jest and react testing library.
-  **Technologies:** React, Next.javascript, Redux, Redux-tookit, Rematch, Ant Design, Materiul-ui, Formik
+
+**Technologies:** React, Next.javascript, Redux, Redux-tookit, Rematch, Ant Design, Materiul-ui, Formik
 
 ## Junior Software Developer
 
@@ -40,7 +50,8 @@ sparehub.com(shutdown) (July 2021 - April 2022 )
 - Developed API services for IoT Servers to track real-time locations for over 3k vehicles.
 - Design and Developed GPS Tracking Dashboard to show vehicle’s live location and control vehicle.
 - Developed Canada’s one the biggest job portal jobminister
-  **Technologies:** Python, Flask, React, Mobx, Redis, MongoDB
+
+**Technologies:** Python, Flask, React, Mobx, Redis, MongoDB
 
 ## Freelance Projects
 
