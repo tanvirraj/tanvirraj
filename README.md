@@ -1,6 +1,4 @@
-**Skills**
-
----
+## Skills
 
 **Languages:** Typescript, Javascript, ECMAScript(ES6), Node.javascript
 **Libraries:** React, Ant design, Materiul-UI, Radix-ui (headless ui components), stitches (css-in-javascript), Formik, Jest, React Testing Library, graphql, apllo-query,
@@ -8,8 +6,6 @@
 **Tools:** Git, Github, Gitlab, storybook, netlify, vercel
 
 ## Work Experience
-
----
 
 ## Full-Stack Software Developer
 
