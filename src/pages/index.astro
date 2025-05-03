@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import siteConfig from "../site-config";
+import { getPosts } from "../utils/posts";
+
+const posts = await getPosts("blog");
+const talks = await getPosts("talks");
+---
+
+<BaseLayout description={siteConfig.description} image={siteConfig.image}>
+  <div class="text-xl mt-8">
+    <div class="mb-8 text-3xl">
+      <p
+        class="text-slate-900 text-2xl sm:text-3xl lg:text-4xl tracking-tight dark:text-white"
+      >
+        I'm <span id="name">tanvir</span>, and I build software<br />
+      </p>
+    </div>
+    <div class="details">
+      <p>
+        Currently I work as a software engineer at <a
+          href="https://buttondown.email"
+          class="prose-link"
+          target="_blank"
+          rel="noopener noreferrer">Buttondown</a
+        >. I hangout on <a
+          href="https://x.com/tanvirraj"
+          rel="noopener noreferrer"
+          class="prose-link">x (twitter)</a
+        > - hit me up, my dms are open!
+      </p>
+    </div>
+    <!-- <div mt-16>
+      <div class="border-gray-200 border-2 rounded-lg">
+        <ListPosts list={posts as any[]} mini={true} />
+      </div>
+    </div>
+    <div mt-8>
+      <ListPosts list={talks as any[]} mini={true} />
+    </div> -->
+  </div>
+</BaseLayout>

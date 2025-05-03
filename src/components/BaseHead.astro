@@ -1,0 +1,157 @@
+---
+import { SEO } from "astro-seo";
+import siteConfig from "../site-config";
+import "../styles/markdown.css";
+
+export type Props = {
+  title?: string;
+  description?: string;
+  image?: { src: string; alt?: string };
+  pageType?: "website" | "article";
+};
+
+const {
+  description = "Hello, I'm   Tanvir Raj, and I build software. This is my personal website with my blog and all the talks and projects I'm working on.",
+  image = siteConfig.image,
+  pageType = "website",
+} = Astro.props;
+const title = [Astro.props.title || "Tanvir Raj", siteConfig.title]
+  .filter(Boolean)
+  .join(" | ");
+const resolvedImage = image?.src
+  ? {
+      src: new URL(image.src, Astro.site).toString(),
+      alt: image.alt,
+    }
+  : undefined;
+const canonicalURL = new URL(Astro.request.url, Astro.site);
+
+/**
+ * Enforce some standard canonical URL formatting across the site.
+ */
+function formatCanonicalURL(url: string | URL) {
+  const path = url.toString();
+  const hasQueryParams = path.includes("?");
+  // If there are query params, make sure the URL has no trailing slash
+  if (hasQueryParams) path.replace(/\/?$/, "");
+
+  // otherwise, canonical URL always has a trailing slash
+  return path.replace(/\/?$/, hasQueryParams ? "" : "/");
+}
+---
+
+<!-- High Priority Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>{title}</title>
+<meta name="generator" content={Astro.generator} />
+
+<!-- Plausible -->
+<script
+  defer
+  data-domain="tanvirraj.com"
+  src="https://plausible.io/js/script.js"></script>
+
+<SEO
+  title={title}
+  description={description}
+  openGraph={{
+    basic: {
+      title: "Tanvir Raj",
+      type: "website",
+      image: resolvedImage?.src || "",
+    },
+  }}
+  twitter={{
+    creator: "@tanvirraj",
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: "icon", href: "/favicon.ico" }],
+    // extending the default meta tags
+    meta: [
+      {
+        name: "twitter:image",
+        content: resolvedImage?.src,
+      },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Tanvir Raj" },
+      { name: "twitter:description", content: "Tanvir Raj" },
+    ],
+  }}
+/>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap"
+  rel="stylesheet"
+/>
+
+<!-- Low Priority Global Metadata -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="alternate" type="application/rss+xml" href="/rss.xml" title="RSS" />
+
+<!-- Page Metadata -->
+<link rel="canonical" href={formatCanonicalURL(canonicalURL)} />
+<meta name="description" content={description} />
+
+<!-- Open Graph / Facebook -->
+<meta name="og:type" property="og:type" content={pageType} />
+<meta
+  name="og:url"
+  property="og:url"
+  content={formatCanonicalURL(canonicalURL)}
+/>
+<meta name="og:title" property="og:title" content={title} />
+<meta name="og:description" property="og:description" content={description} />
+{resolvedImage?.src && <meta property="og:image" content={resolvedImage.src} />}
+{
+  resolvedImage?.alt && (
+    <meta
+      name="og:image:alt"
+      property="og:image:alt"
+      content={resolvedImage.alt}
+    />
+  )
+}
+
+<!-- X/Twitter -->
+<meta
+  name="twitter:card"
+  property="twitter:card"
+  content="summary_large_image"
+/>
+<meta
+  name="twitter:url"
+  property="twitter:url"
+  content={formatCanonicalURL(canonicalURL)}
+/>
+<meta name="twitter:title" property="twitter:title" content={title} />
+<meta name="twitter:site" property="twitter:site" content="@tanvirraj" />
+<meta name="twitter:creator" property="twitter:creator" content="@tanvirraj" />
+<meta
+  name="twitter:description"
+  property="twitter:description"
+  content={description}
+/>
+{
+  resolvedImage?.src && (
+    <meta
+      name="twitter:image"
+      property="twitter:image"
+      content={resolvedImage.src}
+    />
+  )
+}
+{
+  resolvedImage?.alt && (
+    <meta
+      name="twitter:image:alt"
+      property="twitter:image:alt"
+      content={resolvedImage?.alt}
+    />
+  )
+}
